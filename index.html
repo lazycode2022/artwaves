@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="image/icon.svg">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ArtWaves起始页设计</title>
+</head>
+
+<body>
+    <!-- 菜单界面的背景 -->
+    <div class="use-bg"></div>
+
+    <!-- 设置和关于？ -->
+    <div class="menu">
+        <div class="use-return top-button" onclick="hdReturn()">
+            <img src="image/icon/Return.svg">
+        </div>
+        <div class="menu-content">
+            <!-- 左边的选项 -->
+            <div class="menu-left">
+                <ul>
+                    <li>
+                        <div class="menu-setting">
+                            <button>
+                                <img src="image/icon/Setting.svg">
+                                <p>设置</p>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-about">
+                            <button>
+                                <img src="image/icon/更新历史.svg">
+                                <p>更新历史</p>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="menu-about">
+                            <button>
+                                <img src="image/icon/About.svg">
+                                <p>关于</p>
+                            </button>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- 显示区域 -->
+            <div class="menu-right">
+                <!-- 设置界面 -->
+                <div class="menu-right-setting">
+                    <div class="menu-setting-style">
+                        <div class="menu-right-ti">
+                            <img src="image/画板.svg">
+                            <p>样式设置</p>
+                        </div>
+                        <div class="menu-right-setting-mode">
+                            <div class="menu-right-setting-mode-content">
+                                <img src="image/页面缩略图.png">
+                            </div>
+                            <div class="menu-right-setting-mode-content">
+                                <img src="image/页面缩略图2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-setting-data">
+                        <div class="menu-right-ti">
+                            <img src="image/icon/数据设置.svg">
+                            <p>数据设置</p>
+                        </div>
+                        <div class="menu-setting-data-delete">
+                            删除所有数据
+                        </div>
+                    </div>
+                </div>
+                <!-- 更新历史 -->
+                <div class="menu-right-history">
+                    暂无任何更新历史
+                </div>
+                <!-- 关于界面 -->
+                <div class="menu-right-about">
+                    <div class="menu-right-about-ti">
+                        <img src="image/标题.png">
+                    </div>
+                    <div class="menu-right-about-content">
+                        <div class="menu-right-about-text">
+                            <p>该起始页的代码与UI主要由<a href="">@笑不死的懒猫</a>编写与设计，其中少不了大家的帮助与支持。</p>
+                        </div>
+                        <!-- 感谢链接 -->
+                        <div class="menu-right-about-link">
+                            <div class="menu-about-link-content">
+                                <a href="#">
+                                    <div class="menu-right-about-link-ti">
+                                        <img src="image/Link/Tofn.svg">
+                                        <div class="menu-right-about-link-text">
+                                            <p>Tofn起始页</p>
+                                            <p>代码参考</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="menu-about-link-content">
+                                <a href="#">
+                                    <div class="menu-right-about-link-ti">
+                                        <img src="image/Link/IconPark.svg">
+                                        <div class="menu-right-about-link-text">
+                                            <p>IconPark</p>
+                                            <p>部分图标来源</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="menu-about-link-content">
+                                <a href="#">
+                                    <div class="menu-right-about-link-ti">
+                                        <img src="image/Link/ArtWaves.svg">
+                                        <div class="menu-right-about-link-text">
+                                            <p>ArtWaves</p>
+                                            <p>提供设计建议</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+    <!-- 提示 -->
+    <div class="tip">
+        <img src="image/成功对勾.svg">
+        <p>修改成功</p>
+    </div>
+
+    <!-- 搜索 -->
+    <div class="search">
+        <div class="search-input parts-style">
+            <div class="search-icon" onclick="search()">
+                <img src="image/icon.svg">
+            </div>
+            <input type="text" placeholder="搜你想搜的..." onfocus="searchFocus()" onblur="searchBlur()">
+        </div>
+    </div>
+
+    <!-- 简介 -->
+    <div></div>
+
+    <!-- Dock栏 -->
+    <div class="dock">
+        <!-- 头像 -->
+        <div class="dock-hd dock-parts parts-style" onclick="hdClick()"></div>
+        <div class="dock-content parts-style dock-parts">
+            <!-- 时间显示 -->
+            <div class="dock-time">
+                <div class="dock-time-left"></div>
+                <div class="dock-time-right">
+                    <div class="dock-time-apm"></div>
+                    <div class="dock-time-date"></div>
+                </div>
+            </div>
+            <!-- 分割线 -->
+            <div class="dock-hr"></div>
+            <!-- 收藏夹 -->
+            <div class="dock-collect"></div>
+        </div>
+    </div>
+
+    <!-- 收藏栏 -->
+    <div class="collect">
+        <div class="collect-top">
+            <div class="use-return top-button" onclick="collectReturn()">
+                <img src="image/icon/Return.svg">
+            </div>
+            <div class="collect-add top-button">
+                <img src="image/icon/加号.svg">
+            </div>
+            <div class="collect-delete top-button" onclick="collectDelete()">
+                <img src="image/icon/垃圾桶.svg">
+            </div>
+        </div>
+        <div class="collect-add-content">
+            <div class="collect-add-input-url">
+                <input type="text" placeholder="网址">
+            </div>
+            <div class="collect-add-input-name">
+                <input type="text" placeholder="标题">
+            </div>
+            <div class="collect-add-bottom">
+                <div class="collect-add-hd"></div>
+                <div class="collect-add-button">确定</div>
+            </div>
+        </div>
+        <div class="collect-content">
+            <div class="collect-app">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
